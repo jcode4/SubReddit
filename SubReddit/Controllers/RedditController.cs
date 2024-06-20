@@ -27,7 +27,8 @@ namespace SubReddit.Controllers
         {
             var clientId = _configuration["RedditApi:ClientId"];
             var clientSecret = _configuration["RedditApi:ClientSecret"];
-            //// Create a Reddit client with your credentials.
+            
+            // Create a Reddit client with your credentials.
             var reddit = new RedditClient(clientId, clientSecret);
 
             // Specify the subreddit you want to retrieve posts from.

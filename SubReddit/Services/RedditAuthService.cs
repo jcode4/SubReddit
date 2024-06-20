@@ -9,9 +9,9 @@ namespace SubReddit.Services
         private readonly RedditClient _redditClient;
         private readonly AuthTokenRetrieverLib _authTokenRetrieverLib;
 
-        public RedditAuthService(string appId, string appSecret)
+        public RedditAuthService(string appId, string appSecret = null, int port = 8080)
         {
-            _authTokenRetrieverLib = new AuthTokenRetrieverLib(appId, appSecret, 8080);
+            _authTokenRetrieverLib = new AuthTokenRetrieverLib(appId, appSecret, port);
         }
         public async Task<string> GetAccessTokenAsync()
         {
